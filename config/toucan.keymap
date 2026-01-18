@@ -17,25 +17,34 @@
         };
     };
 
+    behaviors {
+        gresc2: quote_doublequote {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BE_QUOT>, <&kp BE_DQUO>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+      
     keymap {
         compatible = "zmk,keymap";
 
         base {
             display-name = "BASE";
             bindings = <
-                &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                                &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                &kp TAB   &kp BE_A &kp BE_Z &kp BE_E &kp BE_R &kp BE_T   &kp BE_Y &kp BE_U  &kp BE_I     &kp BE_O   &kp BE_P    &kp BSPC
+                &kp LCTRL &kp BE_Q &kp BE_S &kp BE_D &kp BE_F &kp BE_G   &kp BE_H &kp BE_J  &kp BE_K     &kp BE_L   &kp BE_M &kp SQT
+                &kp LSHFT &kp BE_W &kp BE_X &kp BE_C &kp BE_V &kp BE_B   &kp BE_N &kp BE_COMM  &kp BE_SCLN &kp BE_COLN &gresc2 &kp ESC
+                                &kp LGUI &mo NAV &mt LSHIFT ESC             &kp SPACE &mo SYM &kp RALT
             >;
         };
 
         nav {
             display-name = "NAV";
             bindings = <
-                &kp TAB     &kp N1          &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-                &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-                &kp LSHFT   &studio_unlock  &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+              &kp TAB &kp ESC  &kp LA(TAB) &kp LC(TAB)  &trans  &trans                &kp HOME &kp PG_DN &kp PG_UP &kp END &caps_word &trans
+              &bt BT_CLR &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp RALT                 &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &kp DEL &trans
+              &kp LSHFT &kp LC(BE_Z)  &kp LC(BE_X) &kp LC(BE_C) &kp TAB &kp LC(BE_V)    &kp LC(BSPC) &kp BSPC &trans &trans &trans &trans
                                                 &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
             >;
         };
@@ -43,9 +52,9 @@
         sym {
             display-name = "SYM";
             bindings = <
-                &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-                &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-                &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                &kp TAB     &kp BE_1          &kp BE_2       &kp BE_3       &kp BE_4       &kp BE_5         &kp BE_6   &kp BE_7   &kp BE_8 &kp BE_9    &kp BE_0 &kp BSPC
+                &kp LCTRL &kp BE_LESS &kp BE_PERC &kp BE_LPRN &kp BE_LBRC &kp BE_LCBR    &kp BE_HASH &kp BE_EQL &kp BE_BSLS &kp BE_PLUS &kp BE_ASTR &kp BSPC
+                &kp LSHFT &kp BE_GREAT &kp BE_DLR &kp BE_RPRN &kp BE_RBRC &kp BE_RCBR    &kp BE_AT &kp BE_EXLM &kp BE_UNDS &kp BE_MINS &kp BE_PIPE &kp BSPC
                                           &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
             >;
         };
