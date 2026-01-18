@@ -53,7 +53,7 @@
         sym {
             display-name = "SYM";
             bindings = <
-                &kp TAB     &kp BE_1          &kp BE_2       &kp BE_3       &kp BE_4       &kp BE_5         &kp BE_6   &kp BE_7   &kp BE_8 &kp BE_9    &kp BE_0 &kp BSPC
+                &kp TAB   &kp BE_1 &kp BE_2 &kp BE_3 &kp BE_4 &kp BE_5                   &kp BE_6  &kp BE_7  &kp BE_8 &kp BE_9 &kp BE_0 &kp BSPC
                 &kp LCTRL &kp BE_LESS &kp BE_PERC &kp BE_LPRN &kp BE_LBRC &kp BE_LCBR    &kp BE_HASH &kp BE_EQL &kp BE_BSLS &kp BE_PLUS &kp BE_ASTR &kp BSPC
                 &kp LSHFT &kp BE_GREAT &kp BE_DLR &kp BE_RPRN &kp BE_RBRC &kp BE_RCBR    &kp BE_AT &kp BE_EXLM &kp BE_UNDS &kp BE_MINS &kp BE_PIPE &kp BSPC
                                           &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
@@ -63,9 +63,9 @@
         adj {
             display-name = "ADJ";
             bindings = <
-                &mo TAB   &trans &kp F7 &kp F8 &kp F9 &kp F12   &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &trans &trans &kp BSPC
-                &kp LCTRL &trans &kp F4 &kp F5 &kp F6 &kp F11   &trans       &trans      &trans       &trans &trans &trans
-                &bt LSHFT &trans &kp F1 &kp F2 &kp F3 &kp F10   &trans       &trans      &trans       &trans &trans &trans
+                &mo TAB &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &none &none
+                &kp LCTRL &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp RALT   &none &kp F10 &kp F11 &kp F12 &none &none
+                &bt LSHFT &trans &none &none &none &none                    &trans &trans &trans &trans &trans &trans
                                    &kp LGUI &mo NAV &kp SPACE   &kp RET &mo 2 &kp RALT
             >;
         };
