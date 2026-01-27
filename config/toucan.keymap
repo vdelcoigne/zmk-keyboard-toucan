@@ -33,9 +33,9 @@
         base {
             display-name = "BASE";
             bindings = <
-                &kp TAB   &kp BE_A &kp BE_Z &kp BE_E &kp BE_R &kp BE_T   &kp BE_Y &kp BE_U  &kp BE_I     &kp BE_O   &kp BE_P    &kp BSPC
-                &kp LCTRL &kp BE_Q &kp BE_S &kp BE_D &kp BE_F &kp BE_G   &kp BE_H &kp BE_J  &kp BE_K     &kp BE_L   &kp BE_M &kp SQT
-                &kp LSHFT &kp BE_W &kp BE_X &kp BE_C &kp BE_V &kp BE_B   &kp BE_N &kp BE_COMM  &kp BE_SCLN &kp BE_COLN &gresc2 &kp ESC
+                &kp BE_AGRV   &kp BE_A &kp BE_Z &kp BE_E &kp BE_R &kp BE_T   &kp BE_Y &kp BE_U  &kp BE_I     &kp BE_O   &kp BE_P   &kp BE_CCED
+                &kp BE_EACU &kp BE_Q &kp BE_S &kp BE_D &kp BE_F &kp BE_G   &kp BE_H &kp BE_J  &kp BE_K     &kp BE_L   &kp BE_M     &kp BE_UGRV
+                &kp BE_EGRV &kp BE_W &kp BE_X &kp BE_C &kp BE_V &kp BE_B   &kp BE_N &kp BE_COMM  &kp BE_SCLN &kp BE_COLN &gresc2   &kp BE_DCIR
                                 &kp LGUI &mo NAV &mt LSHIFT ESC             &kp SPACE &mo SYM &kp RALT
             >;
         };
@@ -63,9 +63,9 @@
         adj {
             display-name = "ADJ";
             bindings = <
-                &mo TAB &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &none &none
-                &kp LCTRL &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp RALT   &none &kp F10 &kp F11 &kp F12 &none &none
-                &bt LSHFT &trans &none &none &none &none                    &trans &trans &trans &trans &trans &trans
+                &bt BT_CLR &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                   &kp F6 &kp F7 &kp F8 &kp F9 &none &bt BT_SEL 0
+                &bt BT_PRV &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp RALT   &none &kp F10 &kp F11 &kp F12 &none &bt BT_SEL 1
+                &bt BT_NXT &trans &none &none &none &none                    &trans &trans &trans &trans &trans &bt BT_SEL 2
                                    &kp LGUI &mo NAV &kp SPACE   &kp RET &mo 2 &kp RALT
             >;
         };
